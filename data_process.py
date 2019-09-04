@@ -14,7 +14,7 @@ import argparse
 
 def load_file(file_path):
     if not os.path.exists(file_path):
-        return None
+        yield None
     with codecs.open(file_path, 'r', encoding='utf-8') as fd:
         for line in fd:
             yield line
